@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Halilović – Pešterske zore | Kućice na Pešteri, Karajukića Bunari</title>
+<meta name="description" content="Drvene kućice u Karajukića Bunarima na Pešterskoj visoravni, opština Sjenica. Za parove, porodice i društvo koje traži tišinu.">
+<meta property="og:title" content="Halilović – Pešterske zore">
+<meta property="og:description" content="Drvene kućice u Karajukića Bunarima na Pešteri.">
+<meta property="og:image" content="images/hero-zima-sumrak.jpg">
+<meta name="theme-color" content="#163B32">
+<style>html,body{margin:0;padding:0;background:#EDE6D6}</style>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{margin:0;background:#EDE6D6;color:#20231F;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:#163B32}
+a:hover{color:#0F2C25}
+iframe{display:block;max-width:100%}
+</style>
+</helmet>
+
+<div style="padding-bottom:{{ padB }}">
+
+
+<div style="font-family:'Public Sans',sans-serif;color:#20231F;background:#EDE6D6">
+
+  <header style="position:fixed;top:0;left:0;right:0;z-index:30;background:{{ hd.bg }};border-bottom:1px solid {{ hd.bd }};transition:background .3s ease, border-color .3s ease">
+    <div style="max-width:1100px;margin:0 auto;padding:{{ hd.pad }} 24px;display:flex;align-items:center;justify-content:space-between;gap:24px;transition:padding .3s ease">
+      <sc-if value="{{ desktop }}" hint-placeholder-val="{{ true }}">
+        <nav style="flex:1;display:flex;gap:28px;font-size:14px;font-weight:500">
+          <a href="#smestaj" style="color:{{ hd.fg }};text-decoration:none" style-hover="color:#C8A35D">Smeštaj</a>
+          <a href="#galerija" style="color:{{ hd.fg }};text-decoration:none" style-hover="color:#C8A35D">Galerija</a>
+          <a href="#pester" style="color:{{ hd.fg }};text-decoration:none" style-hover="color:#C8A35D">Pešter</a>
+          <a href="#lokacija" style="color:{{ hd.fg }};text-decoration:none" style-hover="color:#C8A35D">Lokacija</a>
+        </nav>
+      </sc-if>
+      <a href="#top" style="text-decoration:none;display:flex;flex-direction:column;align-items:{{ logoAlign }};line-height:1;color:{{ hd.logo }}">
+        <span style="font-family:'Young Serif',serif;font-size:24px">Halilović</span>
+        <span style="margin-top:6px;display:flex;align-items:center;gap:8px;font-size:10px;font-weight:600;letter-spacing:.26em;text-transform:uppercase;color:{{ hd.fg }}"><span style="width:5px;height:5px;background:#C8A35D;transform:rotate(45deg)"></span>Pešterske zore<span style="width:5px;height:5px;background:#C8A35D;transform:rotate(45deg)"></span></span>
+      </a>
+      <div style="flex:1;display:flex;justify-content:flex-end;align-items:center;gap:24px">
+        <sc-if value="{{ desktop }}" hint-placeholder-val="{{ true }}">
+          <a href="tel:+381628361689" style="color:{{ hd.fg }};font-size:14px;font-weight:500;text-decoration:none;white-space:nowrap">+381 62 836 1689</a>
+        </sc-if>
+        <sc-if value="{{ mobile }}" hint-placeholder-val="{{ false }}">
+          <button onClick="{{ menuOpen }}" aria-label="Otvori meni" style="height:44px;padding:0 16px;display:flex;align-items:center;gap:10px;background:transparent;border:1px solid {{ hd.btnBd }};border-radius:8px;color:{{ hd.fg }};font-family:'Public Sans',sans-serif;font-size:14px;font-weight:600;cursor:pointer"><span style="display:flex;flex-direction:column;gap:4px"><span style="width:16px;height:1.5px;background:{{ hd.fg }}"></span><span style="width:16px;height:1.5px;background:{{ hd.fg }}"></span></span>Meni</button>
+        </sc-if>
+        <sc-if value="{{ desktop }}" hint-placeholder-val="{{ true }}">
+        <a href="https://wa.me/381628361689?text=Zdravo%2C%20zanima%20me%20slobodan%20termin." target="_blank" style="background:{{ hd.btnBg }};color:{{ hd.btnFg }};border:1px solid {{ hd.btnBd }};padding:11px 18px;border-radius:8px;font-size:14px;font-weight:600;text-decoration:none;white-space:nowrap;transition:background .3s ease, color .3s ease">Slobodni termini</a>
+        </sc-if>
+      </div>
+    </div>
+  </header>
+
+  <section id="top" style="position:relative;min-height:{{ heroH }};display:flex;flex-direction:column;justify-content:flex-end;background:#0F2C25;background-image:{{ heroBg }};background-size:cover;background-position:{{ heroPos }};background-repeat:no-repeat;color:#F6F3EB;overflow:hidden">
+    <div style="width:100%;max-width:1100px;margin:0 auto;padding:{{ heroPadT }} 24px {{ heroPadB }};box-sizing:border-box;min-height:{{ heroInH }};display:flex;flex-direction:column;justify-content:flex-end">
+      <div style="display:flex;align-items:center;gap:14px;font-size:12px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:#E3C88F"><span style="width:40px;height:1px;background:#C8A35D"></span>Pešterska visoravan · Sjenica</div>
+      <h1 style="margin:{{ h1Mt }} 0 0;font-family:'Young Serif',serif;font-weight:400;font-size:clamp(40px,min(5.8vw,9.5vh),84px);line-height:{{ h1Lh }};letter-spacing:-.02em;color:#F6F3EB">Vaš mir.<br>Vaša priroda.<br><span style="color:#E3C88F">Vaš odmor.</span></h1>
+      <div style="margin-top:{{ heroGap }};display:flex;flex-direction:column;align-items:flex-start;gap:{{ heroGap2 }}">
+        <p style="margin:0;max-width:40ch;font-size:{{ heroPfs }};line-height:1.6;color:#EDE6D6">Drvene kućice u Karajukića Bunarima. Za parove, porodice i društvo koje traži tišinu.</p>
+        <sc-if value="{{ mobile }}" hint-placeholder-val="{{ false }}">
+          <div style="width:100%;display:flex;flex-direction:column;align-items:stretch;gap:6px">
+            <a href="https://wa.me/381628361689?text=Zdravo%2C%20zanima%20me%20slobodan%20termin." target="_blank" style="height:56px;display:flex;align-items:center;justify-content:center;background:#F6F3EB;color:#163B32;border-radius:8px;font-size:16px;font-weight:600;text-decoration:none">Proverite slobodne termine</a>
+            <a href="#galerija" style="height:48px;display:flex;align-items:center;justify-content:center;gap:8px;color:#F6F3EB;font-size:15px;font-weight:500;text-decoration:none">Pogledajte kućice <span style="color:#E3C88F">↓</span></a>
+          </div>
+        </sc-if>
+        <sc-if value="{{ desktop }}" hint-placeholder-val="{{ true }}">
+        <div style="display:flex;flex-wrap:wrap;align-items:center;gap:12px 32px">
+          <a href="https://wa.me/381628361689?text=Zdravo%2C%20zanima%20me%20slobodan%20termin." target="_blank" style="text-align:center;background:#F6F3EB;color:#163B32;padding:18px 28px;border-radius:8px;font-size:16px;font-weight:600;text-decoration:none;transition:background .25s ease" style-hover="background:#FFFFFF;color:#163B32">Proverite slobodne termine</a>
+          <a href="#galerija" style="display:flex;align-items:center;gap:10px;padding:8px 0;color:#F6F3EB;font-size:16px;font-weight:500;text-decoration:none;border-bottom:1px solid rgba(227,200,143,.6)" style-hover="border-bottom-color:#E3C88F">Pogledajte kućice <span style="color:#E3C88F">↓</span></a>
+        </div>
+        </sc-if>
+      </div>
+    </div>
+    <sc-if value="{{ desktop }}" hint-placeholder-val="{{ true }}">
+    <div style="width:100%;max-width:1100px;margin:0 auto;padding:0 24px">
+      <div style="display:grid;grid-template-columns:{{ stripCols }};border-top:1px solid rgba(246,243,235,.28)">
+        <div style="padding:{{ stripPad }};font-size:{{ stripFs }};line-height:1.45;color:#EDE6D6"><span style="display:block;font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:#E3C88F;margin-bottom:6px">Smeštaj</span>Drvene kućice sa kuhinjom i kupatilom</div>
+        <div style="padding:{{ stripPad }};font-size:{{ stripFs }};line-height:1.45;color:#EDE6D6"><span style="display:block;font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:#E3C88F;margin-bottom:6px">Napolju</span>Ognjište, dvorište i otvoren pogled</div>
+        <div style="padding:{{ stripPad }};font-size:{{ stripFs }};line-height:1.45;color:#EDE6D6"><span style="display:block;font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:#E3C88F;margin-bottom:6px">Dolazak</span>Besplatan parking za goste</div>
+      </div>
+    </div>
+    </sc-if>
+    <sc-if value="{{ mobile }}" hint-placeholder-val="{{ false }}"><div style="height:calc(32px + env(safe-area-inset-bottom))"></div></sc-if>
+  </section>
+
+  <section id="smestaj" style="background:#E2D8C3;padding:clamp(72px,10vw,128px) 0">
+    <div style="max-width:1100px;margin:0 auto;padding:0 24px;display:flex;flex-wrap:wrap;gap:48px 72px;align-items:center">
+      <div style="flex:1 1 340px;min-width:0">
+        <img src="images/kucica-jesen.jpg" alt="Kućica spolja u jesen, dvorište sa klupama i pogled na planinu" loading="lazy" style="display:block;width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:6px">
+      </div>
+      <div style="flex:1 1 380px;min-width:0">
+        <span style="display:block;width:7px;height:7px;background:#C8A35D;transform:rotate(45deg)"></span>
+        <h2 style="margin:28px 0 0;font-family:'Young Serif',serif;font-weight:400;font-size:clamp(32px,4vw,48px);line-height:1.12;color:#163B32;text-wrap:balance;max-width:16ch">Topla kućica na otvorenoj visoravni</h2>
+        <div style="margin-top:32px;display:flex;flex-direction:column;gap:18px;font-size:17px;line-height:1.75;max-width:52ch">
+          <p style="margin:0">Halilović - Pešterske zore su drvene kućice u Karajukića Bunarima, na Pešterskoj visoravni kod Sjenice.</p>
+          <p style="margin:0">Zidovi i plafoni su od drveta. Kada uđete, odmah osetite miris i toplinu.</p>
+          <p style="margin:0">Jutro počinje kafom ispred vrata. Veče se završava kod ognjišta.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="sadrzaji" style="padding:clamp(72px,10vw,128px) 0">
+    <div style="max-width:1100px;margin:0 auto;padding:0 24px;display:flex;flex-wrap:wrap;gap:48px 72px;align-items:flex-start">
+      <div style="flex:1 1 280px;position:{{ stickyPos }};top:110px">
+        <h2 style="margin:0;font-family:'Young Serif',serif;font-weight:400;font-size:clamp(36px,4.4vw,56px);line-height:1.05;color:#163B32">Kućice i sadržaji</h2>
+        <p style="margin:20px 0 0;font-size:16px;line-height:1.65;max-width:34ch;color:#3A3E38">Sve što piše ovde odnosi se na naše kućice. Ako vas zanima nešto što ne vidite, pitajte nas.</p>
+        <img src="images/dnevni-boravak.jpg" alt="Dnevni boravak sa drvenim gredama, ugaonom garniturom i trpezarijom" loading="lazy" style="display:block;margin-top:32px;width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:6px">
+      </div>
+      <div style="flex:2 1 480px">
+        <div style="border-top:1px solid #D3C9B3;padding:28px 0;display:grid;grid-template-columns:{{ numCol }} minmax(0,1fr);gap:16px"><span style="font-family:'Young Serif',serif;font-size:20px;color:#163B32">01</span><div><div style="font-family:'Young Serif',serif;font-size:{{ itemFs }};line-height:1.2;color:#163B32">Komforne kućice</div><p style="margin:8px 0 0;font-size:16px;line-height:1.65;max-width:52ch">Spavaći prostor sa krevetima, dnevni boravak, kuhinja, trpezarija i kupatilo.</p></div></div>
+        <div style="border-top:1px solid #D3C9B3;padding:28px 0;display:grid;grid-template-columns:{{ numCol }} minmax(0,1fr);gap:16px"><span style="font-family:'Young Serif',serif;font-size:20px;color:#163B32">02</span><div><div style="font-family:'Young Serif',serif;font-size:{{ itemFs }};line-height:1.2;color:#163B32">Za porodice i grupe</div><p style="margin:8px 0 0;font-size:16px;line-height:1.65;max-width:52ch">Dođite sa decom ili sa društvom. Recite nam koliko vas je, pa ćemo naći raspored koji vam odgovara.</p></div></div>
+        <div style="border-top:1px solid #D3C9B3;padding:28px 0;display:grid;grid-template-columns:{{ numCol }} minmax(0,1fr);gap:16px"><span style="font-family:'Young Serif',serif;font-size:20px;color:#163B32">03</span><div><div style="font-family:'Young Serif',serif;font-size:{{ itemFs }};line-height:1.2;color:#163B32">Ognjište i druženje</div><p style="margin:8px 0 0;font-size:16px;line-height:1.65;max-width:52ch">Uveče vatra, razgovor i zvezde. Na Pešteri nema gradskog svetla.</p></div></div>
+        <div style="border-top:1px solid #D3C9B3;padding:28px 0;display:grid;grid-template-columns:{{ numCol }} minmax(0,1fr);gap:16px"><span style="font-family:'Young Serif',serif;font-size:20px;color:#163B32">04</span><div><div style="font-family:'Young Serif',serif;font-size:{{ itemFs }};line-height:1.2;color:#163B32">Mir i privatnost</div><p style="margin:8px 0 0;font-size:16px;line-height:1.65;max-width:52ch">Imate svoj prostor i svoj ritam. Niko vas ne žuri.</p></div></div>
+        <div style="border-top:1px solid #D3C9B3;padding:28px 0;display:grid;grid-template-columns:{{ numCol }} minmax(0,1fr);gap:16px"><span style="font-family:'Young Serif',serif;font-size:20px;color:#163B32">05</span><div><div style="font-family:'Young Serif',serif;font-size:{{ itemFs }};line-height:1.2;color:#163B32">Priroda oko vas</div><p style="margin:8px 0 0;font-size:16px;line-height:1.65;max-width:52ch">Kućice gledaju na otvorene pejzaže Peštera.</p></div></div>
+        <div style="border-top:1px solid #D3C9B3;border-bottom:1px solid #D3C9B3;padding:28px 0;display:grid;grid-template-columns:{{ numCol }} minmax(0,1fr);gap:16px"><span style="font-family:'Young Serif',serif;font-size:20px;color:#163B32">06</span><div><div style="font-family:'Young Serif',serif;font-size:{{ itemFs }};line-height:1.2;color:#163B32">Besplatan parking</div><p style="margin:8px 0 0;font-size:16px;line-height:1.65;max-width:52ch">Dolazite kolima, a parking za goste je besplatan.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="galerija" style="background:#E2D8C3;padding:clamp(72px,10vw,128px) 0">
+    <div style="max-width:1100px;margin:0 auto;padding:0 24px">
+      <div style="display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:20px 48px">
+        <div>
+          <div style="display:flex;align-items:center;gap:12px;font-size:12px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:#163B32"><span style="width:28px;height:1px;background:#C8A35D"></span>Galerija</div>
+          <h2 style="margin:20px 0 0;font-family:'Young Serif',serif;font-weight:400;font-size:clamp(36px,4.4vw,56px);line-height:1.05;color:#163B32;max-width:14ch">Pogledajte pre nego što dođete</h2>
+        </div>
+        <div style="max-width:40ch">
+          <p style="margin:0;font-size:16px;line-height:1.65;color:#3A3E38">Kućice spolja i iznutra, leti i zimi. Sve fotografije su snimljene kod nas. Kliknite na sliku da je uvećate.</p>
+          <a href="https://www.instagram.com/halilovic_pesterske_zore/" target="_blank" style="display:inline-block;margin-top:14px;font-size:15px;font-weight:600;text-decoration:none;border-bottom:1px solid #C8A35D;padding-bottom:3px">Više na Instagramu</a>
+        </div>
+      </div>
+      <div style="margin-top:48px;display:grid;grid-template-columns:{{ galCols }};grid-auto-rows:{{ galRow }};grid-auto-flow:dense;gap:12px">
+        <sc-for list="{{ gal }}" as="g" hint-placeholder-count="7">
+          <button onClick="{{ g.onClick }}" aria-label="Uvećaj: {{ g.label }}" style="grid-column:{{ g.col }};grid-row:{{ g.row }};position:relative;overflow:hidden;padding:0;border:0;border-radius:6px;cursor:zoom-in;background-color:#D9CFBA;background-image:{{ g.bgImg }};background-size:cover;background-position:center;display:flex;align-items:flex-end;justify-content:flex-start;transition:opacity .3s ease" style-hover="opacity:.88">
+            <span style="margin:10px;padding:5px 9px;border-radius:4px;background:rgba(15,44,37,.82);color:#F6F3EB;font-family:'Public Sans',sans-serif;font-size:12px;font-weight:500;letter-spacing:.02em">{{ g.cat }}</span>
+          </button>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section id="pester" style="background:#163B32;color:#F6F3EB;padding:clamp(72px,10vw,128px) 0">
+    <div style="max-width:1100px;margin:0 auto;padding:0 24px">
+      <div style="text-align:center">
+        <div style="display:inline-flex;align-items:center;gap:12px;font-size:12px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:#C8A35D"><span style="width:28px;height:1px;background:#C8A35D"></span>Odmor na Pešteri<span style="width:28px;height:1px;background:#C8A35D"></span></div>
+        <h2 style="margin:24px auto 0;font-family:'Young Serif',serif;font-weight:400;font-size:clamp(36px,5vw,64px);line-height:1.05;max-width:16ch">Visoravan iznad hiljadu metara</h2>
+      </div>
+      <div style="margin:48px auto 0;max-width:900px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:24px 48px;font-size:17px;line-height:1.7;color:#E2DFD4">
+        <p style="margin:0">Pešter je kraška visoravan između Sjenice i Tutina, na oko 1.150 metara nadmorske visine. Vazduh je svež i usred leta, a noći su tihe.</p>
+        <p style="margin:0">Peštersko polje je specijalni rezervat prirode, a kod sela je jezero gde se odmaraju ptice selice. Šetajte poljem ili ostanite ceo dan ispred kućice.</p>
+      </div>
+      <div role="img" aria-label="Pešterska visoravan u zoru, magla nad poljem i plastovi sena" style="margin-top:{{ pImgMt }};aspect-ratio:{{ pImgAr }};border-radius:6px;background:#24493F url(images/pester-zora.jpg) center 52%/cover no-repeat"></div>
+      <div style="margin-top:clamp(72px,9vw,112px);padding-top:48px;border-top:1px solid #3D6158">
+        <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:20px 48px">
+          <div>
+            <div style="font-size:12px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:#C8A35D">U okviru kampa</div>
+            <h3 style="margin:14px 0 0;font-family:'Young Serif',serif;font-weight:400;font-size:clamp(28px,3.4vw,40px);line-height:1.1">Kamp Peštersko polje</h3>
+          </div>
+          <p style="margin:0;max-width:52ch;font-size:15px;line-height:1.65;color:#E2DFD4">Naše kućice su na turističkom području kampa Peštersko polje. Fotografije ispod prikazuju kamp, a ne smeštaj Halilović - Pešterske zore. Za sadržaje kampa pitajte nas pre dolaska.</p>
+        </div>
+        <div style="margin-top:36px;display:grid;grid-template-columns:{{ campCols }};gap:{{ campGap }}">
+          <sc-for list="{{ camp }}" as="c" hint-placeholder-count="6">
+            <figure style="margin:0">
+              <button onClick="{{ c.onClick }}" aria-label="Uvećaj: {{ c.label }}" style="display:block;padding:0;border:0;cursor:zoom-in;transition:opacity .3s ease;width:100%;aspect-ratio:4/3;border-radius:6px;background-color:#24493F;background-image:{{ c.bgImg }};background-position:center;background-size:cover" style-hover="opacity:.88"></button>
+              <figcaption style="margin-top:10px;font-size:{{ capFs }};line-height:1.4;color:#E2DFD4">{{ c.label }}</figcaption>
+            </figure>
+          </sc-for>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="lokacija" style="padding:clamp(72px,10vw,128px) 0">
+    <div style="max-width:1100px;margin:0 auto;padding:0 24px;display:flex;flex-wrap:wrap;gap:40px 64px;align-items:center">
+      <div style="flex:1 1 300px">
+        <div style="display:flex;align-items:center;gap:12px;font-size:12px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:#163B32"><span style="width:28px;height:1px;background:#C8A35D"></span>Lokacija</div>
+        <h2 style="margin:20px 0 0;font-family:'Young Serif',serif;font-weight:400;font-size:clamp(36px,4.4vw,56px);line-height:1.05;color:#163B32">Karajukića Bunari</h2>
+        <p style="margin:16px 0 0;font-size:17px;line-height:1.6">Opština Sjenica, Srbija<br>Pešterska visoravan, 1.128 m nadmorske visine</p>
+        <p style="margin:24px 0 0;font-size:17px;line-height:1.7;max-width:40ch">Selo je južno od Sjenice, na ivici Pešterskog polja. Pre polaska nam se javite i poslaćemo vam tačnu lokaciju na WhatsApp.</p>
+        <a href="https://wa.me/381628361689?text=Zdravo%2C%20po%C5%A1aljite%20mi%20ta%C4%8Dnu%20lokaciju." target="_blank" style="display:inline-block;margin-top:24px;font-size:15px;font-weight:600;text-decoration:none;border-bottom:1px solid #C8A35D;padding-bottom:3px">Tražite tačnu lokaciju</a>
+      </div>
+      <div style="flex:1.6 1 420px;min-width:0">
+        <div style="aspect-ratio:4/3;border:1px solid #D3C9B3;border-radius:6px;overflow:hidden;background:#D9CFBA">
+          <iframe src="https://www.google.com/maps?q=43.0892,20.0895&amp;z=12&amp;output=embed" title="Mapa: Karajukića Bunari, Sjenica" loading="lazy" style="display:block;width:100%;height:100%;border:0"></iframe>
+        </div>
+        <sc-if value="{{ notes }}" hint-placeholder-val="{{ true }}">
+          <p style="margin:12px 0 0;padding:10px 12px;border:1px dashed #A9AAA2;font-size:13px;line-height:1.5;color:#4D514B">Napomena za postavljanje: mapa sada pokazuje centar sela Karajukića Bunari. Tačnu poziciju objekta potvrditi pre objave sajta.</p>
+        </sc-if>
+      </div>
+    </div>
+  </section>
+
+  <section id="pitanja" style="background:#E2D8C3;padding:clamp(72px,10vw,128px) 0">
+    <div style="max-width:1100px;margin:0 auto;padding:0 24px;display:flex;flex-wrap:wrap;gap:40px 72px;align-items:flex-start">
+      <div style="flex:1 1 280px;position:{{ stickyPos }};top:110px">
+        <div style="display:flex;align-items:center;gap:12px;font-size:12px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:#163B32"><span style="width:28px;height:1px;background:#C8A35D"></span>Pitanja</div>
+        <h2 style="margin:20px 0 0;font-family:'Young Serif',serif;font-weight:400;font-size:clamp(36px,4.4vw,56px);line-height:1.05;color:#163B32">Česta pitanja</h2>
+        <p style="margin:20px 0 0;font-size:16px;line-height:1.65;max-width:32ch;color:#3A3E38">Ne vidite odgovor koji vam treba? Pišite nam, odgovaramo na WhatsApp-u i Viberu.</p>
+        <a href="https://wa.me/381628361689" target="_blank" style="display:inline-block;margin-top:20px;font-size:15px;font-weight:600;text-decoration:none;border-bottom:1px solid #C8A35D;padding-bottom:3px">Postavite pitanje</a>
+      </div>
+      <div style="flex:2 1 480px;min-width:0">
+          <div style="border-top:1px solid #C9BEA6">
+            <button onClick="{{ fq1.toggle }}" aria-expanded="{{ fq1.open }}" style="width:100%;display:flex;justify-content:space-between;align-items:center;gap:24px;padding:22px 0;background:none;border:0;cursor:pointer;text-align:left;font-family:'Young Serif',serif;font-size:clamp(19px,2vw,22px);line-height:1.3;color:#163B32"><span>Kako da rezervišem kućicu?</span><span style="flex:none;width:34px;height:34px;border:1px solid #BFB39A;border-radius:6px;display:flex;align-items:center;justify-content:center;font-family:'Public Sans',sans-serif;font-size:18px;color:#163B32">{{ fq1.sign }}</span></button>
+            <sc-if value="{{ fq1.open }}" hint-placeholder-val="{{ true }}"><p style="margin:0 0 26px;max-width:60ch;font-size:16px;line-height:1.7;color:#3A3E38">Pošaljite poruku na WhatsApp ili Viber, ili pozovite +381 62 836 1689. Napišite datume dolaska i odlaska i koliko vas dolazi. Odgovaramo sa slobodnim terminima i cenom.</p></sc-if>
+          </div>
+          <div style="border-top:1px solid #C9BEA6">
+            <button onClick="{{ fq2.toggle }}" aria-expanded="{{ fq2.open }}" style="width:100%;display:flex;justify-content:space-between;align-items:center;gap:24px;padding:22px 0;background:none;border:0;cursor:pointer;text-align:left;font-family:'Young Serif',serif;font-size:clamp(19px,2vw,22px);line-height:1.3;color:#163B32"><span>Koliko košta noćenje?</span><span style="flex:none;width:34px;height:34px;border:1px solid #BFB39A;border-radius:6px;display:flex;align-items:center;justify-content:center;font-family:'Public Sans',sans-serif;font-size:18px;color:#163B32">{{ fq2.sign }}</span></button>
+            <sc-if value="{{ fq2.open }}" hint-placeholder-val="{{ false }}"><p style="margin:0 0 26px;max-width:60ch;font-size:16px;line-height:1.7;color:#3A3E38">Cena zavisi od termina, broja osoba i dužine boravka. Pišite nam datume i dobićete tačnu cenu.</p></sc-if>
+          </div>
+          <div style="border-top:1px solid #C9BEA6">
+            <button onClick="{{ fq3.toggle }}" aria-expanded="{{ fq3.open }}" style="width:100%;display:flex;justify-content:space-between;align-items:center;gap:24px;padding:22px 0;background:none;border:0;cursor:pointer;text-align:left;font-family:'Young Serif',serif;font-size:clamp(19px,2vw,22px);line-height:1.3;color:#163B32"><span>Koliko osoba može da boravi u kućici?</span><span style="flex:none;width:34px;height:34px;border:1px solid #BFB39A;border-radius:6px;display:flex;align-items:center;justify-content:center;font-family:'Public Sans',sans-serif;font-size:18px;color:#163B32">{{ fq3.sign }}</span></button>
+            <sc-if value="{{ fq3.open }}" hint-placeholder-val="{{ false }}"><p style="margin:0 0 26px;max-width:60ch;font-size:16px;line-height:1.7;color:#3A3E38">Recite nam koliko vas je, sa decom ili bez. Predložićemo raspored koji vam odgovara.</p></sc-if>
+          </div>
+          <div style="border-top:1px solid #C9BEA6">
+            <button onClick="{{ fq4.toggle }}" aria-expanded="{{ fq4.open }}" style="width:100%;display:flex;justify-content:space-between;align-items:center;gap:24px;padding:22px 0;background:none;border:0;cursor:pointer;text-align:left;font-family:'Young Serif',serif;font-size:clamp(19px,2vw,22px);line-height:1.3;color:#163B32"><span>Šta ima u kućici?</span><span style="flex:none;width:34px;height:34px;border:1px solid #BFB39A;border-radius:6px;display:flex;align-items:center;justify-content:center;font-family:'Public Sans',sans-serif;font-size:18px;color:#163B32">{{ fq4.sign }}</span></button>
+            <sc-if value="{{ fq4.open }}" hint-placeholder-val="{{ false }}"><p style="margin:0 0 26px;max-width:60ch;font-size:16px;line-height:1.7;color:#3A3E38">Spavaći prostor sa krevetima, dnevni boravak, kuhinja, trpezarija i kupatilo. Zidovi i plafoni su obloženi drvetom.</p></sc-if>
+          </div>
+          <div style="border-top:1px solid #C9BEA6">
+            <button onClick="{{ fq5.toggle }}" aria-expanded="{{ fq5.open }}" style="width:100%;display:flex;justify-content:space-between;align-items:center;gap:24px;padding:22px 0;background:none;border:0;cursor:pointer;text-align:left;font-family:'Young Serif',serif;font-size:clamp(19px,2vw,22px);line-height:1.3;color:#163B32"><span>Da li ima parking?</span><span style="flex:none;width:34px;height:34px;border:1px solid #BFB39A;border-radius:6px;display:flex;align-items:center;justify-content:center;font-family:'Public Sans',sans-serif;font-size:18px;color:#163B32">{{ fq5.sign }}</span></button>
+            <sc-if value="{{ fq5.open }}" hint-placeholder-val="{{ false }}"><p style="margin:0 0 26px;max-width:60ch;font-size:16px;line-height:1.7;color:#3A3E38">Ima. Parking za goste je besplatan.</p></sc-if>
+          </div>
+          <div style="border-top:1px solid #C9BEA6">
+            <button onClick="{{ fq6.toggle }}" aria-expanded="{{ fq6.open }}" style="width:100%;display:flex;justify-content:space-between;align-items:center;gap:24px;padding:22px 0;background:none;border:0;cursor:pointer;text-align:left;font-family:'Young Serif',serif;font-size:clamp(19px,2vw,22px);line-height:1.3;color:#163B32"><span>Kako da stignem do Karajukića Bunara?</span><span style="flex:none;width:34px;height:34px;border:1px solid #BFB39A;border-radius:6px;display:flex;align-items:center;justify-content:center;font-family:'Public Sans',sans-serif;font-size:18px;color:#163B32">{{ fq6.sign }}</span></button>
+            <sc-if value="{{ fq6.open }}" hint-placeholder-val="{{ false }}"><p style="margin:0 0 26px;max-width:60ch;font-size:16px;line-height:1.7;color:#3A3E38">Selo je u opštini Sjenica, južno od grada, na ivici Pešterskog polja. Pre polaska nam se javite i poslaćemo vam tačnu lokaciju na WhatsApp.</p></sc-if>
+          </div>
+          <div style="border-top:1px solid #C9BEA6">
+            <button onClick="{{ fq7.toggle }}" aria-expanded="{{ fq7.open }}" style="width:100%;display:flex;justify-content:space-between;align-items:center;gap:24px;padding:22px 0;background:none;border:0;cursor:pointer;text-align:left;font-family:'Young Serif',serif;font-size:clamp(19px,2vw,22px);line-height:1.3;color:#163B32"><span>Kakvo je vreme na Pešteri?</span><span style="flex:none;width:34px;height:34px;border:1px solid #BFB39A;border-radius:6px;display:flex;align-items:center;justify-content:center;font-family:'Public Sans',sans-serif;font-size:18px;color:#163B32">{{ fq7.sign }}</span></button>
+            <sc-if value="{{ fq7.open }}" hint-placeholder-val="{{ false }}"><p style="margin:0 0 26px;max-width:60ch;font-size:16px;line-height:1.7;color:#3A3E38">Selo je na 1.128 metara nadmorske visine. Leta su sveža, a zime su među najhladnijima u Srbiji. U januaru 2006. ovde je izmereno -39 °C, najniža temperatura u Srbiji. Ponesite toplu odeću i leti, za večeri. Ako dolazite zimi, pitajte nas za stanje puta.</p></sc-if>
+          </div>
+          <div style="border-top:1px solid #C9BEA6">
+            <button onClick="{{ fq8.toggle }}" aria-expanded="{{ fq8.open }}" style="width:100%;display:flex;justify-content:space-between;align-items:center;gap:24px;padding:22px 0;background:none;border:0;cursor:pointer;text-align:left;font-family:'Young Serif',serif;font-size:clamp(19px,2vw,22px);line-height:1.3;color:#163B32"><span>Da li su kućice deo kampa Peštersko polje?</span><span style="flex:none;width:34px;height:34px;border:1px solid #BFB39A;border-radius:6px;display:flex;align-items:center;justify-content:center;font-family:'Public Sans',sans-serif;font-size:18px;color:#163B32">{{ fq8.sign }}</span></button>
+            <sc-if value="{{ fq8.open }}" hint-placeholder-val="{{ false }}"><p style="margin:0 0 26px;max-width:60ch;font-size:16px;line-height:1.7;color:#3A3E38">Kućice su na turističkom području kampa Peštersko polje, koji su pokrenule porodice Hukić i Halilović. Sve na ovoj stranici odnosi se na smeštaj Halilović - Pešterske zore. Za sadržaje kampa pitajte nas.</p></sc-if>
+          </div>
+          <div style="border-top:1px solid #C9BEA6;border-bottom:1px solid #C9BEA6">
+            <button onClick="{{ fq9.toggle }}" aria-expanded="{{ fq9.open }}" style="width:100%;display:flex;justify-content:space-between;align-items:center;gap:24px;padding:22px 0;background:none;border:0;cursor:pointer;text-align:left;font-family:'Young Serif',serif;font-size:clamp(19px,2vw,22px);line-height:1.3;color:#163B32"><span>Šta ima da se vidi u okolini?</span><span style="flex:none;width:34px;height:34px;border:1px solid #BFB39A;border-radius:6px;display:flex;align-items:center;justify-content:center;font-family:'Public Sans',sans-serif;font-size:18px;color:#163B32">{{ fq9.sign }}</span></button>
+            <sc-if value="{{ fq9.open }}" hint-placeholder-val="{{ false }}"><p style="margin:0 0 26px;max-width:60ch;font-size:16px;line-height:1.7;color:#3A3E38">Peštersko polje je specijalni rezervat prirode i močvarno područje od međunarodnog značaja. Kod sela je jezero gde se zaustavljaju ptice selice. Ostatak vremena možete provesti u šetnji poljem ili ispred kućice.</p></sc-if>
+          </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="kontakt" style="padding:clamp(72px,10vw,128px) 0">
+    <div style="max-width:1100px;margin:0 auto;padding:0 24px">
+      <div style="text-align:center">
+        <div style="display:inline-flex;align-items:center;gap:12px;font-size:12px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:#163B32"><span style="width:28px;height:1px;background:#C8A35D"></span>Rezervacije<span style="width:28px;height:1px;background:#C8A35D"></span></div>
+        <h2 style="margin:20px auto 0;font-family:'Young Serif',serif;font-weight:400;font-size:clamp(40px,5.6vw,72px);line-height:1.04;color:#163B32;max-width:14ch">Proverite slobodne termine</h2>
+      </div>
+      <div style="margin-top:56px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:0 40px">
+        <div style="border-top:1px solid #163B32;padding:24px 0 32px"><div style="font-family:'Young Serif',serif;font-size:40px;color:#163B32">1</div><p style="margin:12px 0 0;font-size:16px;line-height:1.65">Pošaljite nam datume i koliko vas dolazi.</p></div>
+        <div style="border-top:1px solid #163B32;padding:24px 0 32px"><div style="font-family:'Young Serif',serif;font-size:40px;color:#163B32">2</div><p style="margin:12px 0 0;font-size:16px;line-height:1.65">Javljamo vam slobodne termine i cenu.</p></div>
+        <div style="border-top:1px solid #163B32;padding:24px 0 32px"><div style="font-family:'Young Serif',serif;font-size:40px;color:#163B32">3</div><p style="margin:12px 0 0;font-size:16px;line-height:1.65">Potvrdite termin, a mi vam šaljemo tačnu lokaciju.</p></div>
+      </div>
+      <div style="margin-top:40px;border:1px solid #D3C9B3;border-radius:8px;padding:clamp(24px,4vw,48px);display:flex;flex-wrap:wrap;gap:40px 56px;align-items:center;background:#F4EEE2">
+        <div style="flex:1 1 280px;display:flex;flex-direction:column;align-items:flex-start;gap:16px">
+          <a href="https://wa.me/381628361689?text=Zdravo%2C%20zanima%20me%20slobodan%20termin." target="_blank" style="align-self:{{ ctaSelf }};text-align:center;background:#163B32;color:#F6F3EB;padding:18px 30px;border-radius:8px;font-size:16px;font-weight:600;text-decoration:none" style-hover="background:#0F2C25;color:#F6F3EB;transition:background .25s ease">Pišite nam na WhatsApp</a>
+          <span style="font-size:14px;color:#4D514B">ili pozovite <a href="tel:+381628361689" style="font-weight:600">+381 62 836 1689</a></span>
+        </div>
+        <div style="flex:1.2 1 320px;font-size:16px">
+          <div style="padding:14px 0;border-bottom:1px solid #D3C9B3;display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 16px"><a href="tel:+381628361689" style="font-family:'Young Serif',serif;font-size:21px;text-decoration:none">+381 62 836 1689</a><span style="color:#4D514B">Poziv, WhatsApp</span></div>
+          <div style="padding:14px 0;border-bottom:1px solid #D3C9B3;display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 16px"><a href="https://wa.me/4915254914247" target="_blank" style="font-family:'Young Serif',serif;font-size:21px;text-decoration:none">+491 525 491 4247</a><span style="color:#4D514B">WhatsApp, Viber</span></div>
+          <div style="padding:14px 0;border-bottom:1px solid #D3C9B3;display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 16px"><a href="https://wa.me/491739206533" target="_blank" style="font-family:'Young Serif',serif;font-size:21px;text-decoration:none">+491 739 206 533</a><span style="color:#4D514B">WhatsApp, Viber</span></div>
+          <div style="margin-top:18px;display:flex;flex-direction:column;gap:6px;font-size:15px">
+            <span>Instagram <a href="https://www.instagram.com/halilovic_pesterske_zore/" target="_blank" style="font-weight:600">@halilovic_pesterske_zore</a></span>
+            <span>Facebook: Halilovic Samir, Halilovic Harisa</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer style="background:#163B32;color:#E2DFD4;padding:clamp(64px,8vw,96px) 0 32px">
+    <div style="max-width:1100px;margin:0 auto;padding:0 24px">
+      <div style="display:grid;grid-template-columns:{{ footCols }};gap:40px 32px">
+        <div style="grid-column:{{ footWide }};min-width:0">
+          <a href="#top" style="text-decoration:none;display:inline-flex;flex-direction:column;line-height:1;color:#F6F3EB">
+            <span style="font-family:'Young Serif',serif;font-size:28px">Halilović</span>
+            <span style="margin-top:8px;display:flex;align-items:center;gap:8px;font-size:10px;font-weight:600;letter-spacing:.26em;text-transform:uppercase;color:#C8A35D"><span style="width:5px;height:5px;background:#C8A35D;transform:rotate(45deg)"></span>Pešterske zore<span style="width:5px;height:5px;background:#C8A35D;transform:rotate(45deg)"></span></span>
+          </a>
+          <p style="margin:24px 0 0;font-family:'Young Serif',serif;font-size:19px;line-height:1.4;color:#F6F3EB;max-width:18ch">Vaš mir. Vaša priroda. Vaš odmor.</p>
+        </div>
+        <div>
+          <div style="font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:#C8A35D">Stranica</div>
+          <nav style="margin-top:18px;display:flex;flex-direction:column;gap:10px;font-size:15px">
+            <a href="#smestaj" style="color:#E2DFD4;text-decoration:none" style-hover="color:#F6F3EB">Smeštaj</a>
+            <a href="#sadrzaji" style="color:#E2DFD4;text-decoration:none" style-hover="color:#F6F3EB">Kućice i sadržaji</a>
+            <a href="#galerija" style="color:#E2DFD4;text-decoration:none" style-hover="color:#F6F3EB">Galerija</a>
+            <a href="#pester" style="color:#E2DFD4;text-decoration:none" style-hover="color:#F6F3EB">Odmor na Pešteri</a>
+            <a href="#lokacija" style="color:#E2DFD4;text-decoration:none" style-hover="color:#F6F3EB">Lokacija</a>
+            <a href="#pitanja" style="color:#E2DFD4;text-decoration:none" style-hover="color:#F6F3EB">Česta pitanja</a>
+            <a href="#kontakt" style="color:#E2DFD4;text-decoration:none" style-hover="color:#F6F3EB">Rezervacije</a>
+          </nav>
+        </div>
+        <div>
+          <div style="font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:#C8A35D">Kontakt</div>
+          <div style="margin-top:18px;display:flex;flex-direction:column;gap:14px;font-size:15px;line-height:1.4">
+            <div><a href="tel:+381628361689" style="color:#F6F3EB;text-decoration:none;font-weight:600">+381 62 836 1689</a><div style="font-size:13px;color:#B5BDB4">Poziv, WhatsApp</div></div>
+            <div><a href="https://wa.me/4915254914247" target="_blank" style="color:#F6F3EB;text-decoration:none;font-weight:600">+491 525 491 4247</a><div style="font-size:13px;color:#B5BDB4">WhatsApp, Viber</div></div>
+            <div><a href="https://wa.me/491739206533" target="_blank" style="color:#F6F3EB;text-decoration:none;font-weight:600">+491 739 206 533</a><div style="font-size:13px;color:#B5BDB4">WhatsApp, Viber</div></div>
+          </div>
+        </div>
+        <div style="grid-column:{{ footWide }}">
+          <div style="font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:#C8A35D">Gde smo</div>
+          <p style="margin:18px 0 0;font-size:15px;line-height:1.6">Karajukića Bunari<br>Sjenica, Srbija<br>Pešterska visoravan</p>
+          <div style="margin-top:24px;font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:#C8A35D">Pratite nas</div>
+          <div style="margin-top:12px;display:flex;flex-direction:column;gap:8px;font-size:15px">
+            <a href="https://www.instagram.com/halilovic_pesterske_zore/" target="_blank" style="color:#F6F3EB;text-decoration:none" style-hover="color:#C8A35D">Instagram @halilovic_pesterske_zore</a>
+            <span>Facebook: Halilovic Samir</span>
+            <span>Facebook: Halilovic Harisa</span>
+          </div>
+        </div>
+      </div>
+      <div style="margin-top:56px;padding:32px 0;border-top:1px solid #3D6158;border-bottom:1px solid #3D6158;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px">
+        <p style="margin:0;font-family:'Young Serif',serif;font-size:clamp(22px,2.6vw,30px);line-height:1.2;color:#F6F3EB">Proverite slobodne termine</p>
+        <a style="flex:1 1 auto;max-width:{{ footBtnMax }};text-align:center;background:#F6F3EB;color:#163B32;padding:16px 26px;border-radius:8px;font-size:15px;font-weight:600;text-decoration:none" href="https://wa.me/381628361689?text=Zdravo%2C%20zanima%20me%20slobodan%20termin." target="_blank" style-hover="background:#FFFFFF;color:#163B32">Pišite nam na WhatsApp</a>
+      </div>
+      <div style="margin-top:24px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;font-size:13px;color:#B5BDB4">
+        <span>© 2026 Halilović - Pešterske zore</span>
+        <span>Smeštaj u drvenim kućicama na Pešteri</span>
+      </div>
+    </div>
+  </footer>
+</div>
+
+
+<sc-if value="{{ lbOpen }}" hint-placeholder-val="{{ false }}">
+  <div role="dialog" aria-modal="true" aria-label="Galerija" style="position:fixed;inset:0;z-index:80;background:#0F2C25;display:flex;flex-direction:column;font-family:'Public Sans',sans-serif;color:#F6F3EB">
+    <div style="display:flex;align-items:center;justify-content:space-between;gap:16px;padding:16px clamp(16px,3vw,32px);border-bottom:1px solid #24493F">
+      <div style="display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 16px;min-width:0"><span style="font-family:'Young Serif',serif;font-size:20px">{{ lbNum }} <span style="color:#9FB2AA">/ {{ lbTotal }}</span></span><span style="font-size:15px;color:#E2DFD4">{{ lbLabel }}</span></div>
+      <button onClick="{{ lbClose }}" aria-label="Zatvori galeriju" style="flex:none;height:44px;padding:0 16px;border:1px solid #3D6158;border-radius:8px;background:transparent;color:#F6F3EB;font:inherit;font-size:14px;cursor:pointer" style-hover="border-color:#F6F3EB">Zatvori</button>
+    </div>
+    <div style="position:relative;flex:1;min-height:0;display:flex;align-items:center;gap:12px;padding:clamp(12px,3vw,32px)">
+      <button onClick="{{ lbPrev }}" aria-label="Prethodna fotografija" style="position:{{ lbArrPos }};left:16px;bottom:16px;z-index:2;flex:none;background:#0F2C25;width:48px;height:48px;border:1px solid #3D6158;border-radius:8px;color:#F6F3EB;font-size:18px;cursor:pointer" style-hover="border-color:#F6F3EB">←</button>
+      <div role="img" aria-label="{{ lbLabel }}" onTouchStart="{{ tStart }}" onTouchEnd="{{ tEnd }}" style="flex:1;align-self:stretch;margin-bottom:{{ lbImgMb }};background-image:{{ lbImg }};background-size:contain;background-position:center;background-repeat:no-repeat"></div>
+      <button onClick="{{ lbNext }}" aria-label="Sledeća fotografija" style="position:{{ lbArrPos }};right:16px;bottom:16px;z-index:2;flex:none;background:#0F2C25;width:48px;height:48px;border:1px solid #3D6158;border-radius:8px;color:#F6F3EB;font-size:18px;cursor:pointer" style-hover="border-color:#F6F3EB">→</button>
+    </div>
+  </div>
+</sc-if>
+
+<sc-if value="{{ menuShow }}" hint-placeholder-val="{{ false }}">
+  <div role="dialog" aria-modal="true" aria-label="Meni" style="position:fixed;inset:0;z-index:90;background:#163B32;color:#F6F3EB;display:flex;flex-direction:column;font-family:'Public Sans',sans-serif;overflow-y:auto">
+    <div style="display:flex;align-items:center;justify-content:space-between;gap:16px;padding:20px 24px">
+      <span style="display:flex;flex-direction:column;line-height:1"><span style="font-family:'Young Serif',serif;font-size:24px">Halilović</span><span style="margin-top:6px;font-size:10px;font-weight:600;letter-spacing:.26em;text-transform:uppercase;color:#C8A35D">Pešterske zore</span></span>
+      <button onClick="{{ menuClose }}" aria-label="Zatvori meni" style="height:44px;padding:0 16px;background:transparent;border:1px solid #3D6158;border-radius:8px;color:#F6F3EB;font:inherit;font-size:14px;font-weight:600;cursor:pointer">Zatvori</button>
+    </div>
+    <nav style="padding:24px 24px 0;display:flex;flex-direction:column">
+      <a href="#smestaj" onClick="{{ menuClose }}" style="padding:14px 0;border-top:1px solid #24493F;font-family:'Young Serif',serif;font-size:30px;color:#F6F3EB;text-decoration:none">Smeštaj</a>
+      <a href="#galerija" onClick="{{ menuClose }}" style="padding:14px 0;border-top:1px solid #24493F;font-family:'Young Serif',serif;font-size:30px;color:#F6F3EB;text-decoration:none">Galerija</a>
+      <a href="#pester" onClick="{{ menuClose }}" style="padding:14px 0;border-top:1px solid #24493F;font-family:'Young Serif',serif;font-size:30px;color:#F6F3EB;text-decoration:none">Pešter</a>
+      <a href="#lokacija" onClick="{{ menuClose }}" style="padding:14px 0;border-top:1px solid #24493F;font-family:'Young Serif',serif;font-size:30px;color:#F6F3EB;text-decoration:none">Lokacija</a>
+      <a href="#pitanja" onClick="{{ menuClose }}" style="padding:14px 0;border-top:1px solid #24493F;font-family:'Young Serif',serif;font-size:30px;color:#F6F3EB;text-decoration:none">Česta pitanja</a>
+      <a href="#kontakt" onClick="{{ menuClose }}" style="padding:14px 0;border-top:1px solid #24493F;border-bottom:1px solid #24493F;font-family:'Young Serif',serif;font-size:30px;color:#F6F3EB;text-decoration:none">Rezervacije</a>
+    </nav>
+    <div style="margin-top:auto;padding:32px 24px calc(28px + env(safe-area-inset-bottom));display:flex;flex-direction:column;gap:12px">
+      <a href="https://wa.me/381628361689?text=Zdravo%2C%20zanima%20me%20slobodan%20termin." target="_blank" style="height:56px;display:flex;align-items:center;justify-content:center;background:#F6F3EB;color:#163B32;border-radius:8px;font-size:16px;font-weight:600;text-decoration:none">Proverite slobodne termine</a>
+      <a href="tel:+381628361689" style="height:56px;display:flex;align-items:center;justify-content:center;border:1px solid #3D6158;color:#F6F3EB;border-radius:8px;font-size:16px;font-weight:600;text-decoration:none">Pozovite +381 62 836 1689</a>
+    </div>
+  </div>
+</sc-if>
+
+<sc-if value="{{ barShow }}" hint-placeholder-val="{{ false }}">
+  <div data-mbar="" style="position:fixed;left:0;right:0;bottom:0;z-index:50;display:flex;gap:8px;padding:8px 12px calc(8px + env(safe-area-inset-bottom));background:#EDE6D6;border-top:1px solid #D3C9B3;box-shadow:0 -8px 24px rgba(15,44,37,.08);font-family:'Public Sans',sans-serif">
+    <a href="tel:+381628361689" style="flex:1;height:48px;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:600;color:#163B32;text-decoration:none;border:1px solid #BFB39A;border-radius:8px">Pozovite</a>
+    <a href="https://wa.me/381628361689?text=Zdravo%2C%20zanima%20me%20slobodan%20termin." target="_blank" style="flex:1.6;height:48px;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:600;color:#F6F3EB;background:#163B32;border-radius:8px;text-decoration:none">Slobodni termini</a>
+  </div>
+</sc-if>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;napomene&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Prikaz&quot;}}">
+class Component extends DCLogic {
+  state = { menu: false, deep: false, fq: 1, lb: false, sc: false, w: typeof window !== 'undefined' ? window.innerWidth : 1280, i: 0 };
+  componentDidMount() {
+    this._r = () => this.setState({ w: window.innerWidth });
+    window.addEventListener('resize', this._r);
+    this._s = () => { const v = window.scrollY > 40, d = window.scrollY > window.innerHeight * 0.75; if (v !== this.state.sc || d !== this.state.deep) this.setState({ sc: v, deep: d }); };
+    window.addEventListener('scroll', this._s, { passive: true });
+    this._s();
+    this._k = e => {
+      if (e.key === 'Escape' && this.state.menu) this.setState({ menu: false });
+      if (!this.state.lb) return;
+      if (e.key === 'Escape') this.setState({ lb: false });
+      if (e.key === 'ArrowRight') this.setState(s => ({ i: (s.i + 1) % this._N }));
+      if (e.key === 'ArrowLeft') this.setState(s => ({ i: (s.i - 1 + this._N) % this._N }));
+    };
+    window.addEventListener('keydown', this._k);
+    this._prev = { ...this.state };
+    this._anim();
+  }
+  _anim() {
+    if (typeof window === 'undefined' || !Element.prototype.animate) return;
+    this._rm = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (this._rm) return;
+    const E = 'cubic-bezier(.2,.7,.2,1)';
+    this._E = E;
+    const hero = document.getElementById('top');
+    if (hero) {
+      const c = hero.firstElementChild;
+      const parts = c ? [c.children[0], c.children[1], ...(c.children[2] ? Array.from(c.children[2].children) : [])].filter(Boolean) : [];
+      parts.forEach((el, n) => el.animate([{ opacity: 0, transform: 'translateY(22px)' }, { opacity: 1, transform: 'none' }], { duration: 1000, delay: 150 + n * 120, easing: E, fill: 'backwards' }));
+      hero.animate([{ opacity: .35 }, { opacity: 1 }], { duration: 1200, easing: 'ease-out', fill: 'backwards' });
+      const strip = hero.children[1];
+      if (strip) strip.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 900, delay: 700, easing: E, fill: 'backwards' });
+    }
+    const sel = 'section:not(#top) :is(h2, h3, p, img, figure, iframe, [role="img"], #galerija button), #sadrzaji [style*="grid-template-columns"], #pitanja button[aria-expanded], #kontakt [style*="border-radius: 8px"][style*="padding"], footer > div > div';
+    let els = Array.from(document.querySelectorAll(sel)).map(el => el.matches('#pitanja button[aria-expanded]') ? el.parentElement : el);
+    document.querySelectorAll('section:not(#top) h2').forEach(h2 => { if (h2.previousElementSibling) els.push(h2.previousElementSibling); });
+    els = Array.from(new Set(els)).filter(el => !el.closest('[role="dialog"]'));
+    els = els.filter(el => !els.some(o => o !== el && o.contains(el)));
+    const vh = window.innerHeight;
+    this._io = new IntersectionObserver(entries => {
+      let n = 0;
+      entries.filter(e => e.isIntersecting).sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top || a.boundingClientRect.left - b.boundingClientRect.left).forEach(e => {
+        const el = e.target;
+        this._io.unobserve(el);
+        el.style.opacity = '';
+        const big = el.matches('img, [role="img"], figure, iframe, #galerija button');
+        el.animate(big
+          ? [{ opacity: 0, transform: 'translateY(28px) scale(.985)' }, { opacity: 1, transform: 'none' }]
+          : [{ opacity: 0, transform: 'translateY(20px)' }, { opacity: 1, transform: 'none' }],
+          { duration: big ? 1100 : 850, delay: Math.min(n++, 6) * 80, easing: E, fill: 'backwards' });
+      });
+    }, { rootMargin: '0px 0px -6% 0px', threshold: 0.08 });
+    els.forEach(el => { if (el.getBoundingClientRect().top < vh * 0.94 && el.getBoundingClientRect().bottom > 0) return; el.style.opacity = '0'; this._io.observe(el); });
+  }
+  componentDidUpdate() {
+    const ps = this._prev || this.state;
+    this._prev = { ...this.state };
+    if (!this._rm && Element.prototype.animate) {
+      const E = this._E || 'ease-out';
+      if (ps.fq !== this.state.fq && this.state.fq) {
+        const b = document.querySelector('#pitanja button[aria-expanded="true"]');
+        const a = b && b.nextElementSibling;
+        if (a) a.animate([{ opacity: 0, transform: 'translateY(-8px)' }, { opacity: 1, transform: 'none' }], { duration: 380, easing: E });
+      }
+      if (!ps.lb && this.state.lb) {
+        const d = document.querySelector('[role="dialog"][aria-label="Galerija"]');
+        if (d) d.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 320, easing: E });
+      }
+      if (this.state.lb && ps.i !== this.state.i) {
+        const im = document.querySelector('[role="dialog"][aria-label="Galerija"] [role="img"]');
+        if (im) im.animate([{ opacity: 0, transform: 'scale(.985)' }, { opacity: 1, transform: 'none' }], { duration: 420, easing: E });
+      }
+      if (!ps.menu && this.state.menu) {
+        const d = document.querySelector('[role="dialog"][aria-label="Meni"]');
+        if (d) {
+          d.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 280, easing: E });
+          d.querySelectorAll('nav a').forEach((a, n) => a.animate([{ opacity: 0, transform: 'translateY(14px)' }, { opacity: 1, transform: 'none' }], { duration: 520, delay: 80 + n * 55, easing: E, fill: 'backwards' }));
+        }
+      }
+      if (!ps.deep && this.state.deep) {
+        const bar = document.querySelector('[data-mbar]');
+        if (bar) bar.animate([{ transform: 'translateY(100%)' }, { transform: 'none' }], { duration: 420, easing: E });
+      }
+    }
+    if (ps.lb !== this.state.lb || ps.menu !== this.state.menu) document.body.style.overflow = (this.state.lb || this.state.menu) ? 'hidden' : '';
+    if (this.state.menu && this.state.w >= 768) this.setState({ menu: false });
+  }
+  componentWillUnmount() { if (this._io) this._io.disconnect(); window.removeEventListener('resize', this._r); window.removeEventListener('scroll', this._s); window.removeEventListener('keydown', this._k); document.body.style.overflow = ''; }
+  renderVals() {
+    const m = this.state.w < 768;
+    const s = this.state.sc;
+    const G = [
+      ['Dnevni boravak', 'Boravak sa kaminom i pogledom na breze', 'images/boravak-kamin.jpg'],
+      ['Spolja', 'Kućica zimi, pogled kroz borove', 'images/kucica-sneg.jpg'],
+      ['Kuhinja', 'Kuhinja u drvetu', 'images/kuhinja.jpg'],
+      ['Spavaća soba', 'Spavaća soba u potkrovlju', 'images/spavaca-soba.jpg'],
+      ['Sprat', 'Sprat sa spavaćom sobom i stepeništem', 'images/sprat-stepeniste.jpg'],
+      ['Spolja', 'Kućica leti, staklena veranda i travnjak', 'images/kucica-leto.jpg'],
+      ['Zima', 'Jutarnja kafa na snegu', 'images/zima-kafa.jpg']
+    ];
+    const camp = [
+      { label: 'Ulaz u kamp Peštersko polje', src: 'images/kamp-ulaz.jpg' },
+      { label: 'Sala sa stolovima', src: 'images/kamp-sala.jpg' },
+      { label: 'A kućica u kampu', src: 'images/kamp-a-kucica.jpg' },
+      { label: 'A kućica iznutra', src: 'images/kamp-a-unutra.jpg' },
+      { label: 'Brvnara za spavanje', src: 'images/kamp-brvnara.jpg' },
+      { label: 'Brvnara iznutra', src: 'images/kamp-brvnara-unutra.jpg' }
+    ];
+    const L = this.state.set === 'c' ? camp.map(c => ['Kamp', c.label, c.src]) : G;
+    const N = L.length, i = Math.min(this.state.i, N - 1);
+    this._N = N;
+    const go = d => this.setState(s => ({ i: (s.i + d + N) % N }));
+    const pad = n => String(n).padStart(2, '0');
+    const fq = k => ({ open: this.state.fq === k, sign: this.state.fq === k ? '−' : '+', toggle: () => this.setState(st => ({ fq: st.fq === k ? 0 : k })) });
+    return {
+      mobile: m, desktop: !m,
+      menuShow: m && this.state.menu, menuOpen: () => this.setState({ menu: true }), menuClose: () => this.setState({ menu: false }),
+      barShow: m && this.state.deep && !this.state.menu && !this.state.lb,
+      logoAlign: m ? 'flex-start' : 'center',
+      h1Mt: m ? '16px' : '28px', heroPadT: m ? '120px' : 'clamp(96px, 14vh, 140px)', heroPadB: m ? '0px' : 'clamp(32px, 7vh, 96px)', heroInH: m ? 'auto' : '100vh', h1Lh: m ? '1.06' : '1.04',
+      heroGap: m ? '20px' : '28px', heroGap2: m ? '24px' : '32px', heroPfs: m ? '15px' : '16px',
+      stripCols: m ? 'repeat(3,minmax(0,1fr))' : 'repeat(3,minmax(0,1fr))', stripPad: m ? '16px 12px 20px 0' : '22px 24px 26px 0', stripFs: m ? '12.5px' : '14px',
+      stickyPos: m ? 'static' : 'sticky', numCol: m ? '36px' : '56px', itemFs: m ? '22px' : '26px',
+      pImgMt: m ? '40px' : '56px', pImgAr: m ? '4/3' : '21/8',
+      campCols: m ? 'repeat(2,minmax(0,1fr))' : 'repeat(3,minmax(0,1fr))', campGap: m ? '20px 12px' : '28px 16px', capFs: m ? '13px' : '14px',
+      footCols: m ? 'repeat(2,minmax(0,1fr))' : '1.3fr 1fr 1fr 1.3fr', footWide: m ? 'span 2' : 'auto', footBtnMax: m ? '100%' : 'none',
+      ctaSelf: m ? 'stretch' : 'flex-start',
+      lbArrPos: m ? 'absolute' : 'static', lbImgMb: m ? '64px' : '0px',
+      tStart: e => { this._tx = e.touches[0].clientX; },
+      tEnd: e => { const d = e.changedTouches[0].clientX - (this._tx ?? 0); if (Math.abs(d) > 40) go(d < 0 ? 1 : -1); },
+      notes: false,
+      padB: m ? '72px' : '0px',
+      cur: { cat: L[i][0], label: L[i][1], bgImg: 'url(' + L[i][2] + ')' }, camp: camp.map((c, n) => ({ label: c.label, bgImg: 'url(' + c.src + ')', onClick: () => this.setState({ set: 'c', i: n, lb: true }) })),
+      heroH: m ? '100svh' : 'auto',
+            heroPos: m ? '66% 30%' : 'center 58%',
+      heroBg: m ? 'linear-gradient(180deg, rgba(15,44,37,.5) 0%, rgba(15,44,37,0) 18%, rgba(15,44,37,0) 38%, rgba(15,44,37,.72) 58%, rgba(15,44,37,.96) 82%), url(images/hero-zima-sumrak.jpg)' : 'linear-gradient(180deg, rgba(15,44,37,.6) 0%, rgba(15,44,37,0) 22%), linear-gradient(0deg, rgba(15,44,37,.92) 0%, rgba(15,44,37,.55) 38%, rgba(15,44,37,0) 70%), linear-gradient(90deg, rgba(15,44,37,.55) 0%, rgba(15,44,37,0) 60%), url(images/hero-zima-sumrak.jpg)',
+      hd: s ? { bg: '#EDE6D6', bd: '#D3C9B3', fg: '#20231F', logo: '#163B32', pad: '12px', btnBg: '#163B32', btnFg: '#F6F3EB', btnBd: '#163B32' } : { bg: 'transparent', bd: 'transparent', fg: '#F6F3EB', logo: '#F6F3EB', pad: '20px', btnBg: 'transparent', btnFg: '#F6F3EB', btnBd: 'rgba(246,243,235,.6)' },
+      galCols: m ? 'repeat(2,minmax(0,1fr))' : 'repeat(4,minmax(0,1fr))',
+      galRow: m ? '96px' : 'clamp(110px, 12vw, 148px)',
+      gal: G.map((g, n) => ({ cat: g[0], label: g[1], bgImg: 'url(' + g[2] + ')', col: 'span ' + ((n === 0) ? 2 : 1), row: 'span ' + (m ? 2 : 3), onClick: () => this.setState({ set: 'g', i: n, lb: true }) })),
+      fq1: fq(1), fq2: fq(2), fq3: fq(3), fq4: fq(4), fq5: fq(5), fq6: fq(6), fq7: fq(7), fq8: fq(8), fq9: fq(9),
+      lbOpen: !!this.state.lb,
+      lbImg: 'url(' + L[i][2] + ')', lbLabel: L[i][1], lbNum: pad(i + 1), lbTotal: pad(N),
+      lbPrev: () => go(-1), lbNext: () => go(1), lbClose: () => this.setState({ lb: false })
+    };
+  }
+}
+</script>
+</body>
+</html>
