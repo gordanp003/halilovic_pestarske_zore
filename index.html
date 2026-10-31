@@ -9,6 +9,8 @@
 <meta property="og:description" content="Drvene kućice u Karajukića Bunarima na Pešteri.">
 <meta property="og:image" content="images/hero-zima-sumrak.jpg">
 <meta name="theme-color" content="#163B32">
+<link rel="preload" as="image" href="images/hero-zima-sumrak-sm.jpg" media="(max-width: 767px)">
+<link rel="preload" as="image" href="images/hero-zima-sumrak.jpg" media="(min-width: 768px)">
 <style>html,body{margin:0;padding:0;background:#EDE6D6}</style>
 <script src="./support.js"></script>
 </head>
@@ -97,7 +99,7 @@ iframe{display:block;max-width:100%}
   <section id="smestaj" style="background:#E2D8C3;padding:clamp(72px,10vw,128px) 0">
     <div style="max-width:1100px;margin:0 auto;padding:0 24px;display:flex;flex-wrap:wrap;gap:48px 72px;align-items:center">
       <div style="flex:1 1 340px;min-width:0">
-        <img src="images/kucica-jesen.jpg" alt="Kućica spolja u jesen, dvorište sa klupama i pogled na planinu" loading="lazy" style="display:block;width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:6px">
+        <img src="images/kucica-jesen-sm.jpg" srcset="images/kucica-jesen-sm.jpg 900w, images/kucica-jesen.jpg 1086w" sizes="(max-width: 767px) 100vw, 50vw" decoding="async" alt="Kućica spolja u jesen, dvorište sa klupama i pogled na planinu" loading="lazy" style="display:block;width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:6px">
       </div>
       <div style="flex:1 1 380px;min-width:0">
         <span style="display:block;width:7px;height:7px;background:#C8A35D;transform:rotate(45deg)"></span>
@@ -116,7 +118,7 @@ iframe{display:block;max-width:100%}
       <div style="flex:1 1 280px;position:{{ stickyPos }};top:110px">
         <h2 style="margin:0;font-family:'Young Serif',serif;font-weight:400;font-size:clamp(36px,4.4vw,56px);line-height:1.05;color:#163B32">Kućice i sadržaji</h2>
         <p style="margin:20px 0 0;font-size:16px;line-height:1.65;max-width:34ch;color:#3A3E38">Sve što piše ovde odnosi se na naše kućice. Ako vas zanima nešto što ne vidite, pitajte nas.</p>
-        <img src="images/dnevni-boravak.jpg" alt="Dnevni boravak sa drvenim gredama, ugaonom garniturom i trpezarijom" loading="lazy" style="display:block;margin-top:32px;width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:6px">
+        <img src="images/dnevni-boravak-sm.jpg" srcset="images/dnevni-boravak-sm.jpg 900w, images/dnevni-boravak.jpg 1448w" sizes="(max-width: 767px) 100vw, 34vw" decoding="async" alt="Dnevni boravak sa drvenim gredama, ugaonom garniturom i trpezarijom" loading="lazy" style="display:block;margin-top:32px;width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:6px">
       </div>
       <div style="flex:2 1 480px">
         <div style="border-top:1px solid #D3C9B3;padding:28px 0;display:grid;grid-template-columns:{{ numCol }} minmax(0,1fr);gap:16px"><span style="font-family:'Young Serif',serif;font-size:20px;color:#163B32">01</span><div><div style="font-family:'Young Serif',serif;font-size:{{ itemFs }};line-height:1.2;color:#163B32">Komforne kućice</div><p style="margin:8px 0 0;font-size:16px;line-height:1.65;max-width:52ch">Spavaći prostor sa krevetima, dnevni boravak, kuhinja, trpezarija i kupatilo.</p></div></div>
@@ -161,7 +163,7 @@ iframe{display:block;max-width:100%}
         <p style="margin:0">Pešter je kraška visoravan između Sjenice i Tutina, na oko 1.150 metara nadmorske visine. Vazduh je svež i usred leta, a noći su tihe.</p>
         <p style="margin:0">Peštersko polje je specijalni rezervat prirode, a kod sela je jezero gde se odmaraju ptice selice. Šetajte poljem ili ostanite ceo dan ispred kućice.</p>
       </div>
-      <div role="img" aria-label="Pešterska visoravan u zoru, magla nad poljem i plastovi sena" style="margin-top:{{ pImgMt }};aspect-ratio:{{ pImgAr }};border-radius:6px;background:#24493F url(images/pester-zora.jpg) center 52%/cover no-repeat"></div>
+      <div role="img" aria-label="Pešterska visoravan u zoru, magla nad poljem i plastovi sena" style="margin-top:{{ pImgMt }};aspect-ratio:{{ pImgAr }};border-radius:6px;background:#24493F {{ pesterImg }} center 52%/cover no-repeat"></div>
       <div style="margin-top:clamp(72px,9vw,112px);padding-top:48px;border-top:1px solid #3D6158">
         <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:20px 48px">
           <div>
@@ -511,15 +513,16 @@ class Component extends DCLogic {
       tStart: e => { this._tx = e.touches[0].clientX; },
       tEnd: e => { const d = e.changedTouches[0].clientX - (this._tx ?? 0); if (Math.abs(d) > 40) go(d < 0 ? 1 : -1); },
       notes: false,
+      pesterImg: m ? 'url(images/pester-zora-sm.jpg)' : 'url(images/pester-zora.jpg)',
       padB: m ? '72px' : '0px',
-      cur: { cat: L[i][0], label: L[i][1], bgImg: 'url(' + L[i][2] + ')' }, camp: camp.map((c, n) => ({ label: c.label, bgImg: 'url(' + c.src + ')', onClick: () => this.setState({ set: 'c', i: n, lb: true }) })),
+      cur: { cat: L[i][0], label: L[i][1], bgImg: 'url(' + L[i][2] + ')' }, camp: camp.map((c, n) => ({ label: c.label, bgImg: 'url(' + c.src.replace('.jpg', '-sm.jpg') + ')', onClick: () => this.setState({ set: 'c', i: n, lb: true }) })),
       heroH: m ? '100svh' : 'auto',
             heroPos: m ? '66% 30%' : 'center 58%',
-      heroBg: m ? 'linear-gradient(180deg, rgba(15,44,37,.5) 0%, rgba(15,44,37,0) 18%, rgba(15,44,37,0) 38%, rgba(15,44,37,.72) 58%, rgba(15,44,37,.96) 82%), url(images/hero-zima-sumrak.jpg)' : 'linear-gradient(180deg, rgba(15,44,37,.6) 0%, rgba(15,44,37,0) 22%), linear-gradient(0deg, rgba(15,44,37,.92) 0%, rgba(15,44,37,.55) 38%, rgba(15,44,37,0) 70%), linear-gradient(90deg, rgba(15,44,37,.55) 0%, rgba(15,44,37,0) 60%), url(images/hero-zima-sumrak.jpg)',
+      heroBg: m ? 'linear-gradient(180deg, rgba(15,44,37,.5) 0%, rgba(15,44,37,0) 18%, rgba(15,44,37,0) 38%, rgba(15,44,37,.72) 58%, rgba(15,44,37,.96) 82%), url(images/hero-zima-sumrak-sm.jpg)' : 'linear-gradient(180deg, rgba(15,44,37,.6) 0%, rgba(15,44,37,0) 22%), linear-gradient(0deg, rgba(15,44,37,.92) 0%, rgba(15,44,37,.55) 38%, rgba(15,44,37,0) 70%), linear-gradient(90deg, rgba(15,44,37,.55) 0%, rgba(15,44,37,0) 60%), url(images/hero-zima-sumrak.jpg)',
       hd: s ? { bg: '#EDE6D6', bd: '#D3C9B3', fg: '#20231F', logo: '#163B32', pad: '12px', btnBg: '#163B32', btnFg: '#F6F3EB', btnBd: '#163B32' } : { bg: 'transparent', bd: 'transparent', fg: '#F6F3EB', logo: '#F6F3EB', pad: '20px', btnBg: 'transparent', btnFg: '#F6F3EB', btnBd: 'rgba(246,243,235,.6)' },
       galCols: m ? 'repeat(2,minmax(0,1fr))' : 'repeat(4,minmax(0,1fr))',
       galRow: m ? '96px' : 'clamp(110px, 12vw, 148px)',
-      gal: G.map((g, n) => ({ cat: g[0], label: g[1], bgImg: 'url(' + g[2] + ')', col: 'span ' + ((n === 0) ? 2 : 1), row: 'span ' + (m ? 2 : 3), onClick: () => this.setState({ set: 'g', i: n, lb: true }) })),
+      gal: G.map((g, n) => ({ cat: g[0], label: g[1], bgImg: 'url(' + g[2].replace('.jpg', '-sm.jpg') + ')', col: 'span ' + ((n === 0) ? 2 : 1), row: 'span ' + (m ? 2 : 3), onClick: () => this.setState({ set: 'g', i: n, lb: true }) })),
       fq1: fq(1), fq2: fq(2), fq3: fq(3), fq4: fq(4), fq5: fq(5), fq6: fq(6), fq7: fq(7), fq8: fq(8), fq9: fq(9),
       lbOpen: !!this.state.lb,
       lbImg: 'url(' + L[i][2] + ')', lbLabel: L[i][1], lbNum: pad(i + 1), lbTotal: pad(N),
